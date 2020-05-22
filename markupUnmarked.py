@@ -8,10 +8,7 @@ from config import settings
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from memes.models import Memes, update_index_in_db
-from searchEngine.indexer import indexer, info
-
-
+from memes.models import Memes
 from memes.ocr_pipeline.craft import CRAFT
 from memes.ocr_pipeline.recognition import netInference, copyStateDict
 
@@ -28,7 +25,7 @@ def markUp(n=500):
     for _ in range(n):
         try:
             meme = Memes.objects.filter(textDescription="").order_by('?')[0]
-        except Exception as e:
+        except Exception:
             break
         print("memeID: " + str(meme.id))
         y = settings.Y

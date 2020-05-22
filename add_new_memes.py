@@ -8,7 +8,7 @@ django.setup()
 from vk_parser.parser import download_memes
 from memes.models import Memes
 from tags.models import Tags
-#from markupUnmarked import markUp
+# from markupUnmarked import markUp
 
 from os import listdir
 from os.path import isfile, join
@@ -58,7 +58,7 @@ def download_vk_memes(pubs_domains, tags):
         upload_images_to_db(images_path, tags[i])  # выгружаем все на сервер
 
     # после загрузки всех новых мемов, вызываем разметчик
-    #markUp()
+    # markUp()
 
 
 if __name__ == '__main__':
