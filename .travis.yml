@@ -4,7 +4,7 @@
 language: python
 python:
   - "3.5" # server version
-  - "3.7" # devs' version
+  - "3.8" # devs' version
 env: 
   - DJANGO=2.2.12 TESSDATA_PREFIX=/usr/share/tesseract-ocr/tessdata
 before_install:
