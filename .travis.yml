@@ -6,11 +6,10 @@ python:
   - "3.5" # server version
   - "3.7" # devs' version
 env: 
-  - DJANGO=2.2.12
-  - TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
+  - DJANGO=2.2.12 TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
 before_install:
   - sudo apt-get install tesseract-ocr
-  - sudp apt-get install tesseract-ocr-rus
+  - sudo apt-get install tesseract-ocr-rus
 install:
   - pip install -r requirements.txt
 #  - pip install flake8
