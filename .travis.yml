@@ -6,7 +6,7 @@ python:
   - "3.5" # server version
   - "3.7" # devs' version
 env: 
-  - DJANGO=2.2.12 TESSDATA_PREFIX=/usr/share/tesseract-ocr/3.04/tessdata
+  - DJANGO=2.2.12 TESSDATA_PREFIX=/usr/share/tesseract-ocr/tessdata
 before_install:
   - sudo apt-get update
   - sudo apt-get install tesseract-ocr
